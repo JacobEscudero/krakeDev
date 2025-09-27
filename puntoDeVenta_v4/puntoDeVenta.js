@@ -10,6 +10,7 @@ calcularValorTotal = function () {
     let valorDescuento;
     let valorIVA;
     let valorTotal;
+    let mensajeResumen;
 
     //1. Recuperar el nombre del producto como String
     nombreProducto=recuperarTexto("txtProducto");
@@ -90,10 +91,13 @@ calcularValorTotal = function () {
             
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
     /*
+    
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
         Si funciona, hacer un commit
     */
+    mensajeResumen="Valor a pagar por "+ cantidad+" "+ nombreProducto+ " con "+ porcentajeDescuento +" % de descuento: " +"USD "+ valorTotal;
+    mostrarTexto("lblResumen", mensajeResumen);
 
 }
 limpiar = function () {
