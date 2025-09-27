@@ -7,7 +7,17 @@ saludar=function(){
     apellido=recuperarTexto("txtApellido");
 
     let edad=recuperarInt("txtEdad");
+
     let estatura=recuperarFloat("txtEstatura")
+    let mensajeBienvenidad="Bienvenido "+ nombre+ " "+apellido;
+    mostrarTexto("lblResultado", mensajeBienvenidad);
+}
+
+mostrarTexto=function( idComponente, mensaje){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.innerText=mensaje;
+
 }
 
 recuperarTexto=function(idComponente){
@@ -30,3 +40,4 @@ recuperarFloat=function(idComponente){
     let valorFlotante=parseFloat(valorCaja);
     return valorFlotante;
 }
+
